@@ -1,0 +1,5 @@
+exports 出口
+request 请求
+response 相应
+require 要求
+parse 解析
