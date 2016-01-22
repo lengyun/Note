@@ -95,10 +95,15 @@
      $git push origin HEAD --force
      $git fetch --all//只是下载远程的库的内容，不做任何的合并
      $git reset --hard origin/master//把HEAD指向刚刚下载的最新的版本
-
-     $git rebase//将多个commit压缩成1个commit
-     $git rebase -i Commit O//
-     $git revert
+     //重写历史
+     $git commit --amend //改变最近一次提交
+     $git rebase -i HEAD~8//合并8个commit
+     /*
+     pick f7f3f6d
+     squash 310154e
+     squash a5f4a0d
+     :wq保存退出
+     */
 
 **缓存修改**
 ***
