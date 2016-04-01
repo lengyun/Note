@@ -45,7 +45,7 @@ $git branch -D directive//强行删除本地directive分支，
 $git branch -m branch1 branch2//将分枝branch1的名字改成branch2
 $git push origin :directive//删除远程分枝directive，冒号前面的空格不能少，原理是把一个空分支push到server上，相当于删除该分支
 $git remote prune origin//清理远程分支，把本地不存在的远程分支删除
-
+$git remote rm origin//清除远程仓库
 //文件比较
 $git diff//查看尚未暂存的文件更新了哪些部分
 
@@ -56,13 +56,25 @@ $git reset --hard <commit_id> //返回到某个节点，不保留修改。
 $git reset --soft <commit_id> //返回到某个节点。保留修改
 $git push origin HEAD --force//提交修改后的commit
 //重写历史
-$git commit --amend //改变最近一次提交
+$git commit --amend //改变最近一次提交注释
 $git rebase -i HEAD~8//合并8个commit
 /*
 pick f7f3f6d
 squash 310154e
 squash a5f4a0d
 :wq保存退出
+*/
+$git rebase//提交合并代码
+/*
+1.新建一个分支，并且代码和服务器中代码同步
+   git checkout -b temp
+3.回到原来的分支
+  git checkout  feature
+4.合并代码，并整理
+  git rebase  temp  //会将temp分支的代码合并过来，并按照提交的顺序排序
+6.解决冲突，最后 git add * ，但不许要git commit
+7.解决后，执行 git rebase --continue
+8.重新提交代码： push origin HEAD --force
 */
 
 $git fetch --all//只是下载远程的库的内容，不做任何的合并
