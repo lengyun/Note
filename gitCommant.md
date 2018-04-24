@@ -3,8 +3,8 @@
 **初始化设置**
 ***
 
-     $ git config --global user.name "lihuangsuo"
-     $ git config --global user.email lihuangsuo@126.com
+     $ git config --global user.name "chris"
+     $ git config --global user.email chris@126.com
 
 **设置命令别名**
 ***
@@ -33,7 +33,6 @@
 **创建文件**
 ***
      $echo "hello." >welcome.txt
-
 
 **克隆项目**
 ***
