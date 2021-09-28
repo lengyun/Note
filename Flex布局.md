@@ -29,14 +29,14 @@ Flex是Flexible Box的缩写，意为“弹性布局”用来为盒状模型提�
 
 ## 容器属性
 
-|                   |                                          |                                          |
-| ----------------- | ---------------------------------------- | ---------------------------------------- |
-| `flex-direction`  | 决定主轴的方向（即项目的排列方向）                        | row \| row-reverse \| column \| column-reverse |
-| ` flex-wrap`      | 一条轴线排不下，如何换行。                            | nowrap \| wrap \| wrap-reverse           |
-| `flex-flow`       | `flex-direction`属性和`flex-wrap`属性的简写形式，默认值为`row nowrap` | flex-start \| flex-end \| center \| space-between \| space-around; |
-| `justify-content` | 项目在主轴上的对齐方式                              | flex-start \| flex-end \| center \| baseline \| stretch |
-| `align-items`     | 定义项目在交叉轴上如何对齐                            | flex-start \| flex-end \| center \| baseline \| stretch; |
-| ` align-content`  | 定义了多根轴线的对齐方式                             | flex-start \| flex-end \| center \| space-between \| space-around \| stretch; |
+|                   |                                                             |                                                              |
+| :---------------- | ----------------------------------------------------------- | ------------------------------------------------------------ |
+| `flex-direction`  | 决定主轴的方向（即项目的排列方向）                          | row(默认:左>右) \| row-reverse(右>左) \| column(上>下) \| column-reverse(下>上) |
+| ` flex-wrap`      | 一条轴线排不下，如何换行。                                  | nowrap(默:不换行) \| wrap(换行) \| wrap-reverse(向上换行)    |
+| `flex-flow`       | `flex-direction`属性和`flex-wrap`属性的简写形式，           | 默认值为`row nowrap`                                         |
+| `justify-content` | 项目在主轴上的对齐方式                                      | flex-start(默认: 左) \| flex-end(右) \| center(中) \| baseline(两端,贴边中间间隔相等) \| stretch(两端,不贴边中间间隔比两端大一倍) |
+| `align-items`     | 定义项目在交叉轴上如何对齐                                  | flex-start(上) \| flex-end(下) \| center(中) \| baseline(项目第一行文字基线) \| stretch(默: 满) |
+| ` align-content`  | 定义了多根轴线的对齐方式,项目只有一根轴线，该属性不起作用。 | flex-start(上) \| flex-end(下) \| center(中) \| space-between(贴边，中间平均) \| space-around(不贴边平均，中间间隙比两端大一倍) \| stretch(默: 满) |
 
 ## 项目的属性
 
